@@ -12,20 +12,20 @@ typedef struct {
     int root_inode;
 } Superblock;
 
-// Questo rappresenta file o directory
+
 typedef struct {
     char name[MAX_NAME];
-    int is_dir;      // 1 = directory, 0 = file
-    int parent;      // inode padre
+    int is_dir;      
+    int parent;      
 
     int children[MAX_CHILDREN];
     int num_children;
 
-    char data[MAX_FILE_SIZE]; // contenuto file
-    int size;                 // dimensione contenuto
+    char data[MAX_FILE_SIZE]; 
+    int size;                 
 } Inode;
 
-// Così strutturiamo il filesystem in memoria
+
 typedef struct {
     Superblock sb;
     Inode inodes[MAX_INODES];

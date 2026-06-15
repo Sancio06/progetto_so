@@ -120,7 +120,7 @@ for (int i = 0; i < dir->num_children; i++) {
     }
 }
 
-        // se non esiste → crealo
+        
         if (found == -1) {
 
             int idx = find_free_inode();

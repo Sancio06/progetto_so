@@ -27,13 +27,13 @@ int main() {
         if (!fgets(line, MAX_CMD, stdin))
             break;
 
-        // rimuove newline
+        
         line[strcspn(line, "\n")] = 0;
 
         if (strcmp(line, "exit") == 0)
             break;
 
-        // parsing semplice: comando + arg1 + arg2
+        
         char cmd[32], arg1[64], arg2[64];
         arg1[0] = arg2[0] = 0;
 
